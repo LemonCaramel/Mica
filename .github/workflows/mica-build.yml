@@ -30,6 +30,9 @@ jobs:
         with:
           name: mica-artifacts
           path: |
-            **/build/libs/mica-**.jar
-            !**/build/libs/mica-**-dev-shadow.jar
-            !**/build/libs/mica-**-sources.jar
+            fabric/build/libs/mica-**.jar
+            !fabric/build/libs/mica-**-dev-shadow.jar
+            !fabric/build/libs/mica-**-sources.jar
+            forge/build/libs/mica-**.jar
+            !forge/build/libs/mica-**-dev-shadow.jar
+            !forge/build/libs/mica-**-sources.jar
