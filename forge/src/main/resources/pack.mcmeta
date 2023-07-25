@@ -1,0 +1,7 @@
+{
+    "pack": {
+        "description": "mica resources",
+        "pack_format": 12,
+        "forge:server_data_pack_format": 12
+    }
+}

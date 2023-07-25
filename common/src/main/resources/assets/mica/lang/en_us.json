@@ -1,0 +1,48 @@
+{
+    "modmenu.descriptionTranslation.mica": "Enable Mica or Acrylic on Windows 11 22H2 22000 or later.",
+
+    "mica.unsupported_os.title": "Unsupported OS",
+    "mica.unsupported_os.description": "%s is only available for Windows 11 22H2 (22000) or later operating systems.",
+
+    "mica.missing_yacl.title": "YetAnotherConfigLib mod isn't installed!!",
+    "mica.missing_yacl.description": "YACL mod is required to change settings on %s.\nClick the button below to download it.",
+    "mica.missing_yacl.download": "Download Mod",
+
+    "mica.category.general": "General",
+    "mica.category.general.use_immersive_dark_mode": "Immersive Dark Mode",
+    "mica.category.general.use_immersive_dark_mode.description": "Can enable \"Immersive Dark Mode\" by enabling the setting.",
+    "mica.category.general.system_backdrop_type": "Window Material",
+    "mica.category.general.system_backdrop_type.description": "Can change it to a system backdrop material that is available in Windows 11.",
+    "mica.category.general.system_backdrop_type.description2": "(Supported starting with Windows 11 build 22621.)",
+    "mica.category.general.system_backdrop_type.type.auto": "Auto",
+    "mica.category.general.system_backdrop_type.type.none": "None",
+    "mica.category.general.system_backdrop_type.type.mica": "Mica Material",
+    "mica.category.general.system_backdrop_type.type.acrylic": "Acrylic Material",
+    "mica.category.general.system_backdrop_type.type.tabbed": "Tabbed UI",
+    "mica.category.general.corner_preference": "Corner curvature",
+    "mica.category.general.corner_preference.description": "Can change the corner curvature of the Window.",
+    "mica.category.general.corner_preference.type.default": "Default",
+    "mica.category.general.corner_preference.type.do_not_round": "Don't Round (W10)",
+    "mica.category.general.corner_preference.type.round": "Round",
+    "mica.category.general.corner_preference.type.round_small": "Small Round",
+
+    "mica.category.border": "Window Border",
+    "mica.category.border.use_default_border": "Default Window Border",
+    "mica.category.border.use_default_border.description": "Can customize the window border by turning off this setting.",
+    "mica.category.border.hide_border": "Use Borderless Window",
+    "mica.category.border.hide_border.description": "Can enable setting to remove the border of the window.",
+    "mica.category.border.border_color": "Change Border Color",
+    "mica.category.border.border_color.description": "Can change the border color of the window.",
+
+    "mica.category.caption": "Title Bar",
+    "mica.category.caption.use_default_caption": "Default Title Bar Color",
+    "mica.category.caption.use_default_caption.description": "Can customize the title bar color by turning off this setting.",
+    "mica.category.caption.caption_color": "Title Bar Color",
+    "mica.category.caption.caption_color.description": "Can change the color of the title bar.",
+
+    "mica.category.title_text": "Title Text",
+    "mica.category.title_text.use_default_color": "Default Title Text Color",
+    "mica.category.title_text.use_default_color.description": "Can customize the title text color by turning off this setting.",
+    "mica.category.title_text.text_color": "Title Text Color",
+    "mica.category.title_text.text_color.description": "Can change the color of the title text."
+}
