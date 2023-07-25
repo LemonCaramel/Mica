@@ -67,10 +67,10 @@ public interface DwmApi extends Library {
 
     @NativeType("HRESULT") // Err
     int DwmSetWindowAttribute(
-		HWND hwnd,
-		int dwAttribute,
-		PointerType pvAttribute,
-		int cbAttribute
+        HWND hwnd,
+        int dwAttribute,
+        PointerType pvAttribute,
+        int cbAttribute
     );
 
     static void updateDwm(final long window) {
@@ -85,21 +85,21 @@ public interface DwmApi extends Library {
         final HWND hwnd = new HWND(Pointer.createConstant(GLFWNativeWin32.glfwGetWin32Window(window)));
         final ModConfig config = ModConfig.get();
 
-		// DWMWA_USE_IMMERSIVE_DARK_MODE
+        // DWMWA_USE_IMMERSIVE_DARK_MODE
         final boolean useImmersiveDarkMode = config.useImmersiveDarkMode.get();
         INSTANCE.DwmSetWindowAttribute(hwnd, DWMWA_USE_IMMERSIVE_DARK_MODE, new IntByReference(useImmersiveDarkMode ? BOOL_TRUE : BOOL_FALSE), INT_SIZE);
 
-		// DWMWA_SYSTEMBACKDROP_TYPE
+        // DWMWA_SYSTEMBACKDROP_TYPE
         if (Mica.buildNumber >= Mica.BACKDROP_BUILD_NUM) {
             final DWM_SYSTEMBACKDROP_TYPE systemBackdropType = config.systemBackdropType.get();
             INSTANCE.DwmSetWindowAttribute(hwnd, DWMWA_SYSTEMBACKDROP_TYPE, new IntByReference(systemBackdropType.ordinal()), INT_SIZE);
         }
 
-		// DWMWA_WINDOW_CORNER_PREFERENCE
+        // DWMWA_WINDOW_CORNER_PREFERENCE
         final DWM_WINDOW_CORNER_PREFERENCE windowCorner = config.windowCorner.get();
         INSTANCE.DwmSetWindowAttribute(hwnd, DWMWA_WINDOW_CORNER_PREFERENCE, new IntByReference(windowCorner.ordinal()), INT_SIZE);
 
-		// DWMWA_BORDER_COLOR
+        // DWMWA_BORDER_COLOR
         if (config.useDefaultBorder.get()) {
             INSTANCE.DwmSetWindowAttribute(hwnd, DWMWA_BORDER_COLOR, new IntByReference(DWMWA_COLOR_DEFAULT), INT_SIZE);
         } else if (config.hideWindowBorder.get()) {
@@ -139,8 +139,8 @@ public interface DwmApi extends Library {
 
     @NativeType("HRESULT") // Err
     int DwmExtendFrameIntoClientArea(
-		HWND hwnd,
-		MARGINS pMarInset
+        HWND hwnd,
+        MARGINS pMarInset
     );
 
     class MARGINS extends Structure {
