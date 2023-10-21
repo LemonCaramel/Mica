@@ -1,8 +1,8 @@
 {
-    "modmenu.descriptionTranslation.mica": "Enable Mica or Acrylic on Windows 11 22H2 22000 or later.",
+    "modmenu.descriptionTranslation.mica": "Enable Mica or Acrylic on Windows 11 21H2 22000 or later.",
 
     "mica.unsupported_os.title": "Unsupported OS",
-    "mica.unsupported_os.description": "%s is only available for Windows 11 22H2 (22000) or later operating systems.",
+    "mica.unsupported_os.description": "%s is only available for Windows 11 21H2 (22000) or later operating systems.",
 
     "mica.missing_yacl.title": "YetAnotherConfigLib mod isn't installed!!",
     "mica.missing_yacl.description": "YACL mod is required to change settings on %s.\nClick the button below to download it.",

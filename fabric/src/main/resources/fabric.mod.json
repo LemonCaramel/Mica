@@ -4,7 +4,7 @@
   "version": "${version}",
 
   "name": "Mica",
-  "description": "Enable Mica or Acrylic on Windows 11 22H2 22000 or later.",
+  "description": "Enable Mica or Acrylic on Windows 11 21H2 22000 or later.",
   "authors": [
     "LemonCaramel"
   ],

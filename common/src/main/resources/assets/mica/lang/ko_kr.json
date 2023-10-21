@@ -1,8 +1,8 @@
 {
-    "modmenu.descriptionTranslation.mica": "Windows 11 22H2 22000 이상의 OS에서 Mica 또는 Acrylic 재질을 활성화합니다.",
+    "modmenu.descriptionTranslation.mica": "Windows 11 21H2 22000 이상의 OS에서 Mica 또는 Acrylic 재질을 활성화합니다.",
 
     "mica.unsupported_os.title": "지원하지 않는 OS",
-    "mica.unsupported_os.description": "%s는 Windows 11 22H2 (22000) 이상의 OS에서만 사용할 수 있습니다.",
+    "mica.unsupported_os.description": "%s는 Windows 11 21H2 (22000) 이상의 OS에서만 사용할 수 있습니다.",
 
     "mica.missing_yacl.title": "YetAnotherConfigLib 모드가 설치되지 않음!!",
     "mica.missing_yacl.description": "%s의 설정을 변경하기 위해서는 YACL 모드가 필요합니다.\n아래 버튼을 클릭하여 다운로드 받으세요.",

@@ -1,8 +1,8 @@
 {
-    "modmenu.descriptionTranslation.mica": "在 Windows 11 22H2 22000 或更高版本上启用云母或亚克力效果",
+    "modmenu.descriptionTranslation.mica": "在 Windows 11 21H2 22000 或更高版本上启用云母或亚克力效果",
 
     "mica.unsupported_os.title": "不支持的系统",
-    "mica.unsupported_os.description": "%s 仅适用于 Windows 11 22H2 (22000) 或更高版本的操作系统。",
+    "mica.unsupported_os.description": "%s 仅适用于 Windows 11 21H2 (22000) 或更高版本的操作系统。",
 
     "mica.missing_yacl.title": "YetAnotherConfigLib 模组没有安装！！",
     "mica.missing_yacl.description": "需要 YACL 模组来更改%s上的设置。\n单击下面的按钮下载它。",

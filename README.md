@@ -2,7 +2,7 @@
 
 # Mica
 
-### Enable Mica or Acrylic on Windows 11 22H2 (Build 22000) or later.
+### Enable Mica or Acrylic on Windows 11 21H2 (Build 22000) or later.
 
 ![License](https://img.shields.io/github/license/LemonCaramel/Mica.svg)
 ![Issues](https://img.shields.io/github/issues/LemonCaramel/Mica.svg)
