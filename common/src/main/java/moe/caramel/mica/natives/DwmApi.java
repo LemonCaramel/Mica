@@ -9,7 +9,6 @@ import com.sun.jna.platform.win32.WinDef.HWND;
 import com.sun.jna.ptr.IntByReference;
 import moe.caramel.mica.Mica;
 import moe.caramel.mica.ModConfig;
-import net.minecraft.Util;
 import org.lwjgl.glfw.GLFWNativeWin32;
 import org.lwjgl.system.NativeType;
 import java.util.List;
@@ -74,11 +73,8 @@ public interface DwmApi extends Library {
     );
 
     static void updateDwm(final long window) {
-        // Check OS and Build Number
-        if (
-            Util.getPlatform() != Util.OS.WINDOWS || Mica.majorVersion < 10 ||
-            Mica.buildNumber < Mica.MINIMUM_BUILD_NUM
-        ) {
+        // Check build number
+        if (!Mica.checkCompatibility()) {
             return;
         }
 

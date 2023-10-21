@@ -1,7 +1,6 @@
 package moe.caramel.mica.forge;
 
 import moe.caramel.mica.Mica;
-import moe.caramel.mica.ModConfig;
 import net.minecraftforge.client.ConfigScreenHandler;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
@@ -17,7 +16,7 @@ public final class MicaForge {
 
     private void commonSetup(final FMLCommonSetupEvent event) {
         ModLoadingContext.get().registerExtensionPoint(ConfigScreenHandler.ConfigScreenFactory.class, () -> {
-            return new ConfigScreenHandler.ConfigScreenFactory((client, screen) -> ModConfig.create(screen));
+            return new ConfigScreenHandler.ConfigScreenFactory((client, screen) -> Mica.configScreen(screen));
         });
     }
 }

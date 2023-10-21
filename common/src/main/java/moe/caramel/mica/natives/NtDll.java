@@ -4,7 +4,6 @@ import com.sun.jna.Library;
 import com.sun.jna.Native;
 import com.sun.jna.ptr.IntByReference;
 import moe.caramel.mica.Mica;
-import net.minecraft.Util;
 
 public interface NtDll extends Library {
 
@@ -18,11 +17,6 @@ public interface NtDll extends Library {
     );
 
     static void getBuildNumber() {
-        // Check OS
-        if (Util.getPlatform() != Util.OS.WINDOWS) {
-            return;
-        }
-
         // Get Windows Info
         final IntByReference majorVersion = new IntByReference();
         final IntByReference buildNumber = new IntByReference();

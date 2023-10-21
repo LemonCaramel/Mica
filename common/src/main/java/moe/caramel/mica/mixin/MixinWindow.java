@@ -6,6 +6,7 @@ import com.mojang.blaze3d.platform.Window;
 import com.mojang.blaze3d.platform.WindowEventHandler;
 import moe.caramel.mica.natives.DwmApi;
 import moe.caramel.mica.natives.NtDll;
+import net.minecraft.Util;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -24,6 +25,12 @@ public final class MixinWindow {
         final DisplayData display, final String videoMode, final String title,
         final CallbackInfo ci
     ) {
+        // Check OS
+        if (Util.getPlatform() != Util.OS.WINDOWS) {
+            return;
+        }
+
+        // Initialize Mica
         NtDll.getBuildNumber();
         DwmApi.updateDwm(this.window);
     }
