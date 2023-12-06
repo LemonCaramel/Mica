@@ -36,3 +36,6 @@ jobs:
             forge/build/libs/mica-**.jar
             !forge/build/libs/mica-**-dev-shadow.jar
             !forge/build/libs/mica-**-sources.jar
+            neoforge/build/libs/mica-**.jar
+            !neoforge/build/libs/mica-**-dev-shadow.jar
+            !neoforge/build/libs/mica-**-sources.jar

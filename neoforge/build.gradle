@@ -3,13 +3,11 @@ plugins {
 }
 architectury {
     platformSetupLoomIde()
-    forge()
+    neoForge()
 }
 
-loom {
-    forge {
-        mixinConfig "mica-common.mixins.json"
-    }
+repositories {
+    maven { url "https://maven.neoforged.net/releases/" }
 }
 
 configurations {
@@ -17,16 +15,20 @@ configurations {
     shadowCommon // Don't use shadow from the shadow plugin because we don't want IDEA to index this.
     compileClasspath.extendsFrom common
     runtimeClasspath.extendsFrom common
-    developmentForge.extendsFrom common
+    developmentNeoForge.extendsFrom common
 }
 
 dependencies {
-    forge "net.minecraftforge:forge:${rootProject.forge_version}"
+    minecraft "com.mojang:minecraft:1.20.2"
+    mappings loom.officialMojangMappings()
+
+    neoForge "net.neoforged:neoforge:${rootProject.neoforge_version}"
 
     common(project(path: ":common", configuration: "namedElements")) { transitive false }
-    shadowCommon(project(path: ":common", configuration: "transformProductionForge")) { transitive = false }
+    shadowCommon(project(path: ":common", configuration: "transformProductionNeoForge")) { transitive false }
 
-    modImplementation "dev.isxander.yacl:yet-another-config-lib-forge:${rootProject.yet_another_config_lib_version}"
+    // TODO modImplementation
+    modCompileOnly "dev.isxander.yacl:yet-another-config-lib-forge:${rootProject.yet_another_config_lib_version}"
 }
 
 processResources {
