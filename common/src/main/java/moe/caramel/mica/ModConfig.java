@@ -1,5 +1,6 @@
 package moe.caramel.mica;
 
+import com.mojang.blaze3d.platform.Window;
 import moe.caramel.mica.natives.DwmApi;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.RegistryAccess;
@@ -104,6 +105,7 @@ public final class ModConfig extends Settings<ModConfig> {
     }
 
     public static void update() {
-        DwmApi.updateDwm(Minecraft.getInstance().getWindow().getWindow());
+        final Window window = Minecraft.getInstance().getWindow();
+        DwmApi.updateDwm(window.isFullscreen(), window.getWindow());
     }
 }

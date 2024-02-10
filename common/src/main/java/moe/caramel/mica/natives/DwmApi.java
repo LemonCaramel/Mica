@@ -72,13 +72,18 @@ public interface DwmApi extends Library {
         int cbAttribute
     );
 
-    static void updateDwm(final long window) {
+    static void updateDwm(final boolean fullscreen, final long window) {
         // Check build number
         if (!Mica.checkCompatibility()) {
             return;
         }
 
         final HWND hwnd = new HWND(Pointer.createConstant(GLFWNativeWin32.glfwGetWin32Window(window)));
+        if (fullscreen) {
+            DwmApi.disableWindowEffect(hwnd);
+            return;
+        }
+
         final ModConfig config = ModConfig.get();
 
         // DWMWA_USE_IMMERSIVE_DARK_MODE
@@ -120,6 +125,17 @@ public interface DwmApi extends Library {
             final int textColor = convert(config.textColor.get());
             INSTANCE.DwmSetWindowAttribute(hwnd, DWMWA_TEXT_COLOR, new IntByReference(textColor), INT_SIZE);
         }
+    }
+
+    static void disableWindowEffect(final HWND hwnd) {
+        // ... DWMWA_USE_IMMERSIVE_DARK_MODE
+        if (Mica.buildNumber >= Mica.BACKDROP_BUILD_NUM) {
+            INSTANCE.DwmSetWindowAttribute(hwnd, DWMWA_SYSTEMBACKDROP_TYPE, new IntByReference(DWM_SYSTEMBACKDROP_TYPE.DWMSBT_AUTO.ordinal()), INT_SIZE);
+        }
+        INSTANCE.DwmSetWindowAttribute(hwnd, DWMWA_WINDOW_CORNER_PREFERENCE, new IntByReference(DWM_WINDOW_CORNER_PREFERENCE.DWMWCP_DEFAULT.ordinal()), INT_SIZE);
+        INSTANCE.DwmSetWindowAttribute(hwnd, DWMWA_BORDER_COLOR, new IntByReference(DWMWA_COLOR_DEFAULT), INT_SIZE);
+        INSTANCE.DwmSetWindowAttribute(hwnd, DWMWA_CAPTION_COLOR, new IntByReference(DWMWA_COLOR_DEFAULT), INT_SIZE);
+        INSTANCE.DwmSetWindowAttribute(hwnd, DWMWA_TEXT_COLOR, new IntByReference(DWMWA_COLOR_DEFAULT), INT_SIZE);
     }
 
     private static int convert(final int color) {
