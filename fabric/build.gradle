@@ -1,5 +1,5 @@
 plugins {
-    id "com.github.johnrengelman.shadow" version "8.1.1"
+    id "io.github.goooler.shadow" version "8.1.7"
 }
 
 architectury {
@@ -25,7 +25,8 @@ dependencies {
     common(project(path: ":common", configuration: "namedElements")) { transitive false }
     shadowCommon(project(path: ":common", configuration: "transformProductionFabric")) { transitive false }
 
-    modImplementation "dev.isxander.yacl:yet-another-config-lib-fabric:${rootProject.yet_another_config_lib_version}"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+    modImplementation "dev.isxander:yet-another-config-lib:${rootProject.yet_another_config_lib_version}-fabric"
     modImplementation "com.terraformersmc:modmenu:${rootProject.mod_menu_version}"
 }
 

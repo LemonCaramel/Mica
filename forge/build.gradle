@@ -1,6 +1,7 @@
 plugins {
-    id "com.github.johnrengelman.shadow" version "8.1.1"
+    id "io.github.goooler.shadow" version "8.1.7"
 }
+
 architectury {
     platformSetupLoomIde()
     forge()
@@ -21,12 +22,22 @@ configurations {
 }
 
 dependencies {
+    minecraft "com.mojang:minecraft:${rootProject.minecraft_version}"
+    mappings loom.layered() {
+        officialMojangMappings()
+        mappings(file("mapping.tiny")) // fix forge remap
+    }
+
     forge "net.minecraftforge:forge:${rootProject.forge_version}"
 
     common(project(path: ":common", configuration: "namedElements")) { transitive false }
     shadowCommon(project(path: ":common", configuration: "transformProductionForge")) { transitive = false }
 
-    modImplementation "dev.isxander.yacl:yet-another-config-lib-forge:${rootProject.yet_another_config_lib_version}"
+    //modImplementation "dev.isxander:yet-another-config-lib:${rootProject.yet_another_config_lib_version}-forge" // TODO
+}
+
+configurations.all {
+    resolutionStrategy.force("net.sf.jopt-simple:jopt-simple:5.0.4")
 }
 
 processResources {
