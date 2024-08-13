@@ -3,6 +3,7 @@ package moe.caramel.mica;
 import static net.minecraft.network.chat.Component.translatable;
 import moe.caramel.mica.screen.ModConfigScreen;
 import net.minecraft.ChatFormatting;
+import net.minecraft.Util;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.AlertScreen;
 import net.minecraft.client.gui.screens.ConfirmLinkScreen;
@@ -17,6 +18,7 @@ public final class Mica {
 
     public static final String MOD_ID = "mica";
     public static final String MOD_NAME = "Mica";
+    private static final String URL_YACL_DOWNLOAD = "https://modrinth.com/mod/yacl";
 
     public static final int MINIMUM_BUILD_NUM = 22000;
     public static final int BACKDROP_BUILD_NUM = 22621;
@@ -57,7 +59,14 @@ public final class Mica {
             return new ConfirmScreen(
                 accept -> {
                     if (accept) {
-                        ConfirmLinkScreen.confirmLinkNow("https://modrinth.com/mod/yacl", screen, true);
+                        final Minecraft client = Minecraft.getInstance();
+                        client.setScreen(new ConfirmLinkScreen(confirm -> {
+                            if (confirm) {
+                                Util.getPlatform().openUri(URL_YACL_DOWNLOAD);
+                            }
+
+                            client.setScreen(screen);
+                        }, URL_YACL_DOWNLOAD, true));
                     } else {
                         Minecraft.getInstance().setScreen(screen);
                     }
