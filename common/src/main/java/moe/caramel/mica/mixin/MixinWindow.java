@@ -1,5 +1,6 @@
 package moe.caramel.mica.mixin;
 
+import com.mojang.blaze3d.TracyFrameCapture;
 import com.mojang.blaze3d.platform.DisplayData;
 import com.mojang.blaze3d.platform.ScreenManager;
 import com.mojang.blaze3d.platform.Window;
@@ -37,7 +38,7 @@ public final class MixinWindow {
     }
 
     @Inject(method = "updateFullscreen", at = @At(value = "TAIL"))
-    private void updateFullscreen(final boolean vsync, final CallbackInfo ci) {
+    private void updateFullscreen(final boolean vsync, final TracyFrameCapture capturer, final CallbackInfo ci) {
         // Check OS
         if (Util.getPlatform() != Util.OS.WINDOWS) {
             return;

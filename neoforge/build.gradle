@@ -25,7 +25,7 @@ dependencies {
     common(project(path: ":common", configuration: "namedElements")) { transitive false }
     shadowCommon(project(path: ":common", configuration: "transformProductionNeoForge")) { transitive false }
 
-    modCompileOnly "dev.isxander:yet-another-config-lib:${rootProject.yet_another_config_lib_version}-neoforge"
+    //modCompileOnly "dev.isxander:yet-another-config-lib:${rootProject.yet_another_config_lib_version}-neoforge" // TODO repository broken
 }
 
 processResources {

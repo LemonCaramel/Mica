@@ -6,8 +6,8 @@
 # The name of the mod loader type to load - for regular FML @Mod mods it should be javafml
 modLoader="javafml" #mandatory
 
-# A version range to match for said mod loader - for regular FML @Mod it will be the FML version. This is currently 3.
-loaderVersion="[3,)" #mandatory
+# A version range to match for said mod loader - for regular FML @Mod it will be the FML version. This is currently 4.
+loaderVersion="[4,)" #mandatory
 
 # The license for you mod. This is mandatory metadata and allows for easier comprehension of your redistributive properties.
 # Review your options at https://choosealicense.com/. All rights reserved is the default copyright stance, and is thus the default here.
@@ -63,20 +63,20 @@ config="mica-common.mixins.json"
 [[dependencies.mica]]
     modId="neoforge"
     type="required"
-    versionRange="[20.5,)"
+    versionRange="[21.2,)"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.mica]]
     modId="minecraft"
     type="required"
-    versionRange="[1.20.5,)"
+    versionRange="[1.21.2,)"
     ordering="NONE"
     side="CLIENT"
 
 [[dependencies.mica]]
     modId="yet_another_config_lib_v3"
     type="optional"
-    versionRange="[3.3.0,)"
+    versionRange="[3.6.0,)"
     ordering="AFTER"
     side="CLIENT"
