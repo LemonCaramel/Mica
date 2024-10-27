@@ -63,14 +63,14 @@ config="mica-common.mixins.json"
 [[dependencies.mica]]
     modId="neoforge"
     type="required"
-    versionRange="[20.5,)"
+    versionRange="[20.5,21.2)"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.mica]]
     modId="minecraft"
     type="required"
-    versionRange="[1.20.5,)"
+    versionRange="[1.20.5,1.21.2)"
     ordering="NONE"
     side="CLIENT"
 
