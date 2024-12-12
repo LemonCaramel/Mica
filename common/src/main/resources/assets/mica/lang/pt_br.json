@@ -1,0 +1,48 @@
+{
+    "modmenu.descriptionTranslation.mica": "Habilite Mica ou Acrílico no Windows 11 21H2 22000 ou posterior.",
+
+    "mica.unsupported_os.title": "Sistema operacional não compatível",
+    "mica.unsupported_os.description": "%s só está disponível para sistemas operacionais Windows 11 21H2 (22000) ou posteriores.",
+
+    "mica.missing_yacl.title": "O mod YetAnotherConfigLib não está instalado!",
+    "mica.missing_yacl.description": "O mod YACL é necessário para alterar as configurações em %s.\nClique no botão abaixo para fazer o download.",
+    "mica.missing_yacl.download": "Baixar o Mod",
+
+    "mica.category.general": "General",
+    "mica.category.general.use_immersive_dark_mode": "Modo Escuro imersivo",
+    "mica.category.general.use_immersive_dark_mode.description": "Pode ativar o \"Immersive Dark Mode\" ativando a configuração.",
+    "mica.category.general.system_backdrop_type": "Material da janela",
+    "mica.category.general.system_backdrop_type.description": "Pode alterá-lo para um material de plano de fundo do sistema que está disponível no Windows 11.",
+    "mica.category.general.system_backdrop_type.description2": "(Suportado a partir do Windows 11 build 22621.)",
+    "mica.category.general.system_backdrop_type.type.auto": "Automático",
+    "mica.category.general.system_backdrop_type.type.none": "Nenhum",
+    "mica.category.general.system_backdrop_type.type.mica": "Material de Mica",
+    "mica.category.general.system_backdrop_type.type.acrylic": "Material de Acrílico",
+    "mica.category.general.system_backdrop_type.type.tabbed": "UI com guias",
+    "mica.category.general.corner_preference": "Curvatura dos Cantos",
+    "mica.category.general.corner_preference.description": "Pode alterar a curvatura dos cantos da janela.",
+    "mica.category.general.corner_preference.type.default": "Padrão",
+    "mica.category.general.corner_preference.type.do_not_round": "Não arredondar (W10)",
+    "mica.category.general.corner_preference.type.round": "Arredondado",
+    "mica.category.general.corner_preference.type.round_small": "Arredondado Pequeno",
+
+    "mica.category.border": "Borda da Janela",
+    "mica.category.border.use_default_border": "Padrão da Borda da Janela",
+    "mica.category.border.use_default_border.description": "É possível personalizar a borda da janela desativando essa configuração.",
+    "mica.category.border.hide_border": "Usar Janela sem Bordas",
+    "mica.category.border.hide_border.description": "Pode ativar a configuração para remover a borda da janela.",
+    "mica.category.border.border_color": "Alterar a Cor das Bordas",
+    "mica.category.border.border_color.description": "Pode alterar a cor da borda da janela.",
+
+    "mica.category.caption": "Barra de título",
+    "mica.category.caption.use_default_caption": "Padrão de cor da Barra de título",
+    "mica.category.caption.use_default_caption.description": "É possível personalizar a cor da barra de título desativando essa configuração.",
+    "mica.category.caption.caption_color": "Cor da Barra de Título",
+    "mica.category.caption.caption_color.description": "Pode alterar a cor da barra de título.",
+
+    "mica.category.title_text": "Texto do título",
+    "mica.category.title_text.use_default_color": "Cor Padrão do Texto do Título",
+    "mica.category.title_text.use_default_color.description": "É possível personalizar a cor do texto do título desativando essa configuração.",
+    "mica.category.title_text.text_color": "Cor do Texto do Título",
+    "mica.category.title_text.text_color.description": "Pode alterar a cor do texto do título."
+}
