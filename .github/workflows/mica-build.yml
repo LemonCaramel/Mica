@@ -2,7 +2,7 @@ name: Build Mica
 
 on:
   push:
-    branches: [ master ]
+    branches: [ ver/1.21.9 ]
 
 jobs:
   build:
