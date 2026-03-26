@@ -1,4 +1,4 @@
-<img src="common/src/main/resources/icon.png" alt="Icon" width="186" />
+<img src="src/main/resources/icon.png" alt="Icon" width="186" />
 
 # Mica
 

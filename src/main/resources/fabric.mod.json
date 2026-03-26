@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "mica",
+  "version": "${version}",
+
+  "name": "Mica",
+  "description": "Enable Mica or Acrylic on Windows 11 21H2 22000 or later.",
+  "authors": [
+    "LemonCaramel"
+  ],
+  "contact": {
+    "homepage": "https://caramel.moe/",
+    "sources": "https://github.com/LemonCaramel/Mica",
+    "issues": "https://github.com/LemonCaramel/Mica/issues"
+  },
+
+  "license": "MIT",
+  "icon": "icon.png",
+
+  "environment": "client",
+  "entrypoints": {
+    "modmenu": [
+      "moe.caramel.mica.platform.fabric.ModMenuImpl"
+    ]
+  },
+  "mixins": [ "mica.mixins.json" ],
+  "depends": {
+    "fabricloader": ">=0.18.4",
+    "minecraft": ">=26.1"
+  },
+  "recommends": {
+    "yet_another_config_lib_v3": ">=3.9.0+26.1"
+  },
+
+  "custom": {
+    "modmenu": {
+      "update_checker": true
+    }
+  }
+}

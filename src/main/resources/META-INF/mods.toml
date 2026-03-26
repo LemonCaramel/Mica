@@ -1,0 +1,46 @@
+# See https://docs.minecraftforge.net/en/1.21.x/gettingstarted/modfiles/#modstoml
+# There are lots of things you can do with the mods.toml, and not all fields are included with this MDK
+# References: https://github.com/MinecraftForge/MDKExamples
+
+modLoader="javafml"
+loaderVersion="[62,)"
+license="MIT"
+issueTrackerURL="https://github.com/LemonCaramel/Mica/issues" #optional
+clientSideOnly=true #optional, default=false
+
+[[mods]]
+modId="mica"
+version="${version}"
+displayName="Mica"
+updateJSONURL="https://api.modrinth.com/updates/mica/forge_updates.json" #optional
+displayURL="https://caramel.moe/" #optional
+logoFile="icon.png" #optional
+#credits="" #optional
+authors="LemonCaramel" #optional
+#displayTest="MATCH_VERSION" #optional, default=MATCH_VERSION when not clientSideOnly, else IGNORE_ALL_VERSION
+
+description='''
+Enable Mica or Acrylic on Windows 11 21H2 22000 or later.
+'''
+
+[[dependencies.mica]] #recommended
+modId="forge"
+mandatory=true
+versionRange="[62,)"
+ordering="NONE"
+side="CLIENT"
+
+[[dependencies.mica]] #recommended
+modId="minecraft"
+mandatory=true
+versionRange="[26.1,)"
+ordering="NONE"
+side="CLIENT"
+
+# Here's another dependency
+[[dependencies.mica]]
+modId="yet_another_config_lib_v3"
+mandatory=false
+versionRange="[3.9.0,)"
+ordering="AFTER"
+side="CLIENT"
