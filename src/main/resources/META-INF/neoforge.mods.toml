@@ -58,21 +58,21 @@ config="mica.mixins.json"
 [[dependencies.mica]]
     modId="neoforge"
     type="required"
-    versionRange="[26.1,)"
+    versionRange="[26.2,)"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.mica]]
     modId="minecraft"
     type="required"
-    versionRange="[26.1,)"
+    versionRange="[26.2,)"
     ordering="NONE"
     side="CLIENT"
 
 [[dependencies.mica]]
     modId="yet_another_config_lib_v3"
     type="optional"
-    versionRange="[3.9.0,)"
+    versionRange="[3.9.6,)"
     ordering="AFTER"
     side="CLIENT"
 

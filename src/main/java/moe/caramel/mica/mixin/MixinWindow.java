@@ -1,6 +1,7 @@
 package moe.caramel.mica.mixin;
 
 import com.mojang.blaze3d.platform.DisplayData;
+import com.mojang.blaze3d.platform.MonitorManager;
 import com.mojang.blaze3d.platform.Window;
 import com.mojang.blaze3d.platform.WindowEventHandler;
 import com.mojang.blaze3d.systems.GpuBackend;
@@ -23,7 +24,8 @@ public final class MixinWindow {
     @Inject(method = "<init>", at = @At(value = "TAIL"))
     private void init(
         final WindowEventHandler handler, final DisplayData displayData,
-        final String fullscreenVideoModeString, final String title, final GpuBackend backend,
+        final String fullscreenVideoModeString, final boolean exclusiveFullscreen,
+        final String title, final MonitorManager monitorManager, final GpuBackend backend,
         final CallbackInfo ci
     ) {
         // Check OS
@@ -36,8 +38,8 @@ public final class MixinWindow {
         DwmApi.updateDwm(this.fullscreen, this.handle);
     }
 
-    @Inject(method = "updateFullscreen", at = @At(value = "TAIL"))
-    private void updateFullscreen(final boolean enableVsync, final CallbackInfo ci) {
+    @Inject(method = "updateFullscreenIfChanged", at = @At(value = "TAIL"))
+    private void updateFullscreenIfChanged(final CallbackInfo ci) {
         // Check OS
         if (Util.getPlatform() != Util.OS.WINDOWS) {
             return;

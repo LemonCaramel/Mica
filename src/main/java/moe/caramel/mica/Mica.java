@@ -46,7 +46,7 @@ public final class Mica {
         // Check OS compatibility
         if (!Mica.checkCompatibility()) {
             return new AlertScreen(
-                () -> Minecraft.getInstance().setScreen(screen),
+                () -> Minecraft.getInstance().setScreenAndShow(screen),
                 translatable("mica.unsupported_os.title").withStyle(ChatFormatting.BOLD, ChatFormatting.RED),
                 translatable("mica.unsupported_os.description", Mica.MOD_NAME)
             );
@@ -60,15 +60,15 @@ public final class Mica {
                 accept -> {
                     if (accept) {
                         final Minecraft client = Minecraft.getInstance();
-                        client.setScreen(new ConfirmLinkScreen(confirm -> {
+                        client.setScreenAndShow(new ConfirmLinkScreen(confirm -> {
                             if (confirm) {
                                 Util.getPlatform().openUri(URL_YACL_DOWNLOAD);
                             }
 
-                            client.setScreen(screen);
+                            client.setScreenAndShow(screen);
                         }, URL_YACL_DOWNLOAD, true));
                     } else {
-                        Minecraft.getInstance().setScreen(screen);
+                        Minecraft.getInstance().setScreenAndShow(screen);
                     }
                 },
                 translatable("mica.missing_yacl.title").withStyle(ChatFormatting.BOLD, ChatFormatting.RED),
