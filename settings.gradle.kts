@@ -9,5 +9,3 @@ pluginManagement {
         gradlePluginPortal()
     }
 }
-
-include("api-forge", "api-neoforge")
